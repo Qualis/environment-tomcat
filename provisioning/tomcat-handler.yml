@@ -1,0 +1,7 @@
+    - name: Setup tomcat users
+      copy: src=resource/tomcat-users.xml dest=/etc/tomcat6/tomcat-users.xml owner=tomcat6 group=tomcat6
+      sudo: yes
+
+    - name: Restart tomcat
+      service: name=tomcat6 state=restarted
+      sudo: yes

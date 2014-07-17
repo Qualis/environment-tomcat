@@ -1,0 +1,30 @@
+    - name: Install java
+      apt: pkg=openjdk-7-jre
+      sudo: yes
+      tags:
+      - tomcat
+      - run
+
+    - name: Install tomcat
+      apt: pkg=tomcat6
+      sudo: yes
+      tags:
+      - tomcat
+      - run
+
+    - name: Install tomcat native
+      apt: pkg=libtcnative-1
+      sudo: yes
+      tags:
+      - tomcat
+      - run
+
+    - name: Install tomcat6-admin
+      apt: pkg=tomcat6-admin
+      sudo: yes
+      tags:
+      - tomcat
+      - manage
+      notify:
+      - Setup tomcat users
+      - Restart tomcat
