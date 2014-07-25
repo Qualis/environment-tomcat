@@ -1,0 +1,7 @@
+TOMCAT6_USER=tomcat6
+
+TOMCAT6_GROUP=tomcat6
+
+JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
+
+unset LC_ALL

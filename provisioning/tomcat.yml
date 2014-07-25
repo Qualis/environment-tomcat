@@ -27,4 +27,5 @@
       - manage
       notify:
       - Setup tomcat users
+      - Setup tomcat defaults
       - Restart tomcat
