@@ -1,12 +1,20 @@
-    - name: Install java
-      apt: pkg=openjdk-7-jre
-      sudo: yes
+
+    - name: Add java 8 ppa
+      apt_repository: repo="ppa:openjdk-r/ppa" update_cache=yes
       tags:
       - tomcat
-      - run
+      - development
+      sudo: yes
+
+    - name: Install java
+      apt: pkg=openjdk-8-jre
+      tags:
+      - tomcat
+      - development
+      sudo: yes
 
     - name: Install tomcat
-      apt: pkg=tomcat6
+      apt: pkg=tomcat7
       sudo: yes
       tags:
       - tomcat
@@ -19,8 +27,8 @@
       - tomcat
       - run
 
-    - name: Install tomcat6-admin
-      apt: pkg=tomcat6-admin
+    - name: Install tomcat7-admin
+      apt: pkg=tomcat7-admin
       sudo: yes
       tags:
       - tomcat
