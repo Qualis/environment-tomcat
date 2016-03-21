@@ -8,4 +8,5 @@
 
     - name: Restart tomcat
       service: name=tomcat7 state=restarted
+      when: avoid_privileged is not defined or avoid_privileged != "true"
       sudo: yes
