@@ -19,6 +19,8 @@
       tags:
       - tomcat
       - run
+      notify:
+      - Setup tomcat defaults
 
     - name: Install tomcat native
       apt: pkg=libtcnative-1
@@ -35,5 +37,3 @@
       - manage
       notify:
       - Setup tomcat users
-      - Setup tomcat defaults
-      - Restart tomcat

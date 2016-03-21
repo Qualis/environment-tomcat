@@ -1,9 +1,13 @@
     - name: Setup tomcat users
       copy: src=tomcat-users.xml dest=/etc/tomcat7/tomcat-users.xml owner=tomcat7 group=tomcat7
+      notify:
+      - Restart tomcat
       sudo: yes
 
     - name: Setup tomcat defaults
       copy: src=tomcat-default dest=/etc/default/tomcat7 owner=tomcat7 group=tomcat7 backup=yes
+      notify:
+      - Restart tomcat
       sudo: yes
 
     - name: Restart tomcat
