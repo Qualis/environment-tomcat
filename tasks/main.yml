@@ -1,18 +1,4 @@
 
-    - name: Add java 8 ppa
-      apt_repository: repo="ppa:openjdk-r/ppa" update_cache=yes
-      tags:
-      - tomcat
-      - development
-      sudo: yes
-
-    - name: Install java
-      apt: pkg=openjdk-8-jre
-      tags:
-      - tomcat
-      - development
-      sudo: yes
-
     - name: Install tomcat
       apt: pkg=tomcat7
       sudo: yes
