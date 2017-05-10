@@ -2,8 +2,6 @@ TOMCAT7_USER=tomcat7
 
 TOMCAT7_GROUP=tomcat7
 
-JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-
 JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC"
 
 unset LC_ALL
